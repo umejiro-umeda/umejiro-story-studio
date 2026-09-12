@@ -156,3 +156,16 @@ h1 span{white-space:nowrap}
   .footer-inner{display:block}
   .footer p{margin-top:18px}
 }
+
+/* 他業種にも伝わる紹介。公開版の色・書体・美容室表示を維持 */
+.business-stories{padding:52px 0;background:var(--paper)}
+.business-copy{font-size:17px;color:var(--muted);overflow-wrap:anywhere}
+.business-copy strong{color:var(--ink)}
+.business-copy p{margin-bottom:18px}
+.business-example{max-width:520px;margin:28px auto 0}
+.business-example a{display:block;cursor:zoom-in}
+.business-example a:focus-visible{outline:3px solid var(--accent);outline-offset:4px}
+.business-example img{width:100%;height:auto;border-radius:12px}
+.business-example figcaption{font-size:14px;line-height:1.7;margin-top:12px;text-align:center;color:var(--muted)}
+.business-example figcaption span{font-size:12px}
+@media(max-width:820px){.business-stories{padding:38px 0}.business-copy{font-size:16px}.business-example{max-width:400px;margin-top:22px}}
