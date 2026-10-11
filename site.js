@@ -37,3 +37,8 @@ if (dialog && typeof dialog.showModal === 'function') {
  dialog.addEventListener('click', e => { if (e.target === dialog) { const r = dialog.getBoundingClientRect(); if (e.clientX < r.left || e.clientX > r.right || e.clientY < r.top || e.clientY > r.bottom) dialog.close(); } });
  dialog.addEventListener('close', () => { document.body.classList.remove('modal-open'); img.removeAttribute('src'); });
 }
+
+// Keep the public /contact route usable in the local file preview.
+if (location.protocol === "file:") {
+ document.querySelectorAll('a[href="/contact"]').forEach(a => a.setAttribute("href", "contact.html"));
+}
