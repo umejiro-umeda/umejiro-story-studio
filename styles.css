@@ -14,3 +14,19 @@
 
 /* Hero shows one complete panel; the full comic remains in the works section. */
 .hero-panel{display:block;background:#fff;cursor:pointer}.hero-panel img{width:100%;height:auto;aspect-ratio:1;object-fit:contain}
+
+/* Visual story choices keep all three subjects visible before reading. */
+.work-chooser-note{display:none;margin-top:24px;color:var(--muted);font-size:13px}
+.has-js .work-chooser-note{display:block}
+.has-js .work-cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px;margin-top:16px}
+.work-cards button{display:block;min-width:0;padding:10px 10px 15px;border:2px solid var(--line);border-radius:10px;background:#fff;color:var(--ink);text-align:center;white-space:normal;line-height:1.5;transition:border-color .18s,background .18s}
+.work-cards button:hover{border-color:var(--accent)}
+.work-cards button[aria-selected=true]{border-color:var(--accent);background:#fcf0e9;color:var(--ink);box-shadow:0 0 0 1px var(--accent)}
+.work-card-thumb{display:flex;align-items:center;justify-content:center;aspect-ratio:1;overflow:hidden;background:#fff;border-radius:4px}
+.work-card-thumb>img{width:100%;height:100%;object-fit:contain}
+.work-card-crop{display:block;position:relative;width:100%;aspect-ratio:650 / 610;overflow:hidden}
+.work-card-crop img{position:absolute;top:0;left:0;width:100%;height:auto;max-width:none}
+.work-card-label{display:block;margin-top:12px;font-size:18px;font-weight:700}
+.work-card-action{display:block;margin-top:5px;font-size:12px;color:var(--accent)}
+@media(max-width:520px){.work-chooser-note{font-size:12px;margin-top:20px}.has-js .work-cards{gap:8px;margin-top:12px}.work-cards button{padding:4px 4px 10px;border-radius:7px}.work-card-label{font-size:12px;letter-spacing:0;margin-top:9px}.work-card-action{font-size:10px;letter-spacing:0;margin-top:4px}}
+@media(prefers-reduced-motion:reduce){.work-cards button{transition:none}}
